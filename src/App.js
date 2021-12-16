@@ -1,6 +1,6 @@
 import BookList from './views/Books/BookList';
 import { BrowserRouter, Link, Switch, Route } from 'react-router-dom';
-// import BookDetail from './views/Books/BookDetail';
+import Home from './components/Home';
 import './App.css';
 
 function App() {
@@ -12,6 +12,7 @@ function App() {
         <h1>Library Catalog</h1>
         <Switch>
           <Route path="/books" exact component={BookList} />
+          <Route path="/" exact component={Home} />
         </Switch>
         {/* one route just / 
             one route is /books
