@@ -1,5 +1,6 @@
 import BookList from './views/Books/BookList';
-import { BrowserRouter, Link, Switch, Route } from 'react-router-dom';
+import BookDetail from './views/Books/BookDetail';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './components/Home';
 import './App.css';
 
@@ -13,6 +14,7 @@ function App() {
         <Switch>
           <Route path="/books" exact component={BookList} />
           <Route path="/" exact component={Home} />
+          <Route path="/books/:id" exact component={BookDetail} />
         </Switch>
         {/* one route just / 
             one route is /books
